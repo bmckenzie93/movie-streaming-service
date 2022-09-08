@@ -2,14 +2,14 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-import Layout from "../components/Layouts/layout"
+import LoginLayout from "../components/Layouts/LoginLayout/LoginLayout"
+import Login from "../components/Login/Login"
 import Seo from "../components/seo"
 
 const IndexPage = () => (
-  <Layout>
-    <p>Hello Clever!</p>
-    
-  </Layout>
+  <LoginLayout>
+      <Login />
+  </LoginLayout>
 )
 
 /**
@@ -17,6 +17,6 @@ const IndexPage = () => (
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo title="Login" />
 
 export default IndexPage
