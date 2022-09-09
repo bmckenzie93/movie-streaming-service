@@ -1,0 +1,33 @@
+.user-icon {
+  &__image-circle {
+    font-size: 3rem;
+  }
+  
+  &__image-circle-border {
+    background: rgb(246,209,244);
+    background: linear-gradient(156deg, rgba(246,209,244,1) 20%, rgba(255,0,210,1) 50%, rgba(129,0,161,1) 80%);
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image-circle-inner {
+    background:  rgba(10,2,28,1);
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    background-position: center;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-image: url('https://images.generated.photos/wjQCs1tZu7-Uaet3-3yDs2xmzTH5dHC72pJ19xRhfXk/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/ODc0Nzg5XzA3OTgx/MzFfMDQyMjQxOC5q/cGc.jpg');
+  }
+
+
+}

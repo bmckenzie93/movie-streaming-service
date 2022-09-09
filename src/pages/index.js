@@ -1,14 +1,12 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
-import LoginLayout from "../components/Layouts/LoginLayout/LoginLayout"
-import Login from "../components/Login/Login"
+import LoginLayout from "../components/Layouts/LoginLayout"
+import LoginUsers from "../components/LoginUsers/"
 import Seo from "../components/seo"
 
 const IndexPage = () => (
   <LoginLayout>
-      <Login />
+      {/* show login users or create user if no users exist */}
+      <LoginUsers />
   </LoginLayout>
 )
 
