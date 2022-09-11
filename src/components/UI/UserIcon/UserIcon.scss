@@ -1,4 +1,40 @@
 .user-icon {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &:hover {
+    .user-icon__image-circle-border {
+      animation: rotate 2s linear infinite;
+    }
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+        scale: 1;
+      }
+      50% {
+        scale: 1.1;
+      }
+
+      100% {
+        transform: rotate(360deg);
+        scale: 1;
+      }
+    }
+
+    .user-icon__image-circle-inner {
+      animation: counter_rotate 2s linear infinite;
+    }
+    @keyframes counter_rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(-360deg);
+      }
+    }
+  }
+
   &__image-circle {
     font-size: 3rem;
   }
@@ -28,6 +64,4 @@
     align-items: center;
     // background-image: url('https://images.generated.photos/wjQCs1tZu7-Uaet3-3yDs2xmzTH5dHC72pJ19xRhfXk/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/ODc0Nzg5XzA3OTgx/MzFfMDQyMjQxOC5q/cGc.jpg');
   }
-
-
 }

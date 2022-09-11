@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    width: 100%;
 
     img {
       padding: 2rem 0;
@@ -30,12 +31,21 @@
   }
 
   &__content {
-    flex: 1;
+    width: 100%;
     display: flex;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
 
-    & > *:not(:last-child) {
-      margin-right: 3rem;
+    .main-container {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+  
+      & > *:not(:last-child) {
+        margin-right: 3rem;
+      }
+
     }
   }
 

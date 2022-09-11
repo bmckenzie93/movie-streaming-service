@@ -2,17 +2,23 @@ import React from 'react'
 import logo from '../../../images/logo.svg'
 import Button from '../../UI/Buttons/Button'
 import ButtonLInk from '../../UI/Buttons/ButtonLink'
+import MainContainer from '../../Containers/MainContainer'
 import './LoginLayout.scss'
 
 const LoginLayout = (props) => (
-  <div className='login-layout'>
+  // user state
+
+  <main className='login-layout'>
     <header className='login-layout__header'>
       <img src={logo} alt="HBO MAX" />
-      <h1>who is watching?</h1>
+      {/* If users, who is watching, else Create Profile */}
+      <h1>create profile</h1>
     </header>
 
     <section className='login-layout__content'>
-      {props.children}
+      <MainContainer>
+        {props.children}
+      </MainContainer>
     </section>
 
     <section className="login-layout__options">
@@ -25,7 +31,7 @@ const LoginLayout = (props) => (
         <ButtonLInk>manage profiles</ButtonLInk>
       </div>
     </section>
-  </div> 
+  </main> 
 )
 
 export default LoginLayout  

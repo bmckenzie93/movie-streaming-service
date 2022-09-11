@@ -8,6 +8,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import MainContainer from "../../Containers/MainContainer"
 
 import Header from "../../Header/Header"
 import "./MainLayout.scss"
@@ -26,7 +27,7 @@ const MainLayout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main>{children}</main>
+      <MainContainer>{children}</MainContainer>
       <footer>
         © {new Date().getFullYear()} &middot; Built by Brandon McKenzie
       </footer>

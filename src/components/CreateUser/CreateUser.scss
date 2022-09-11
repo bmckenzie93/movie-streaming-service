@@ -1,0 +1,87 @@
+.create-profile {
+  margin: auto 0;
+
+  .input-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+
+    label { 
+      display: block;
+      text-align: left;
+      transition: all .2s ease-in-out;
+    }
+
+    input {
+      letter-spacing: inherit;
+      background-color: transparent;
+      border: 0;
+      border-bottom: 2px solid rgba(246,209,244,1);
+      width: 100%;
+      padding: .5rem 0;
+      font-size: 1.2rem;
+      color: white;
+      transition: all .2s ease-in-out;
+      margin-bottom: .5rem;
+
+      &:focus,
+      &:active {
+        outline: 0;
+        border-color: rgba(255,0,210,1);
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+
+        & + label {
+          color: rgba(255,0,210,1);
+        }
+      }
+    }
+  }
+
+  &__color-picker {
+    display: flex;
+    border: 3px solid transparent;
+
+    & .active {
+      border: 3px solid white;
+    }
+
+    &__color {    
+      cursor: pointer;
+      
+      &:not(:last-child) {
+      margin-right: 1rem;
+    }
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background-color: white;
+
+      &--red {
+        background: hsla(0, 100%, 55%, 1);
+        background: linear-gradient(135deg, hsla(0, 100%, 55%, 1) 0%, hsla(339, 100%, 55%, 1) 51%, hsla(0, 100%, 55%, 1) 99%);
+      }
+      &--orange {
+        background: hsla(339, 100%, 55%, 1);
+        background: linear-gradient(135deg, hsla(339, 100%, 55%, 1) 0%, hsla(28, 93%, 57%, 1) 51%, hsla(339, 100%, 55%, 1) 99%);
+      }
+      &--yellow {
+        background: hsla(58, 100%, 68%, 1);
+        background: linear-gradient(135deg, hsla(58, 100%, 68%, 1) 0%, hsla(21, 100%, 54%, 1) 50%, hsla(58, 100%, 68%, 1) 100%);
+      }
+      &--green {
+        background: hsla(152, 100%, 50%, 1);
+        background: linear-gradient(135deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 50%, hsla(152, 100%, 50%, 1) 99%);
+      }
+      &--blue {
+        background: hsla(217, 100%, 50%, 1);
+        background: linear-gradient(135deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 50%, hsla(217, 100%, 50%, 1) 99%);
+      }
+      &--violet {
+        background: hsla(294, 100%, 55%, 1);
+        background: linear-gradient(135deg, hsla(294, 100%, 55%, 1) 0%, hsla(258, 100%, 50%, 1) 51%, hsla(294, 100%, 55%, 1) 99%);
+      }
+    }
+  }
+  
+}
