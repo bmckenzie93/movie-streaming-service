@@ -4,7 +4,10 @@ export const GlobalStateContext = React.createContext()
 export const GlobalDispatchContext = React.createContext()
 
 const initialState = {
-  theme: 'violet'
+  userId: 9999,
+  theme: 'red',
+  firstName: 'Brandon',
+  lastName: 'McKenzie'
 }
 
 const reducer = (state, action) => {

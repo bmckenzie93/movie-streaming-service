@@ -1,18 +1,12 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/ssr-apis/
- */
-const React = require("react")
-const GlobalContextProvider = require("./src/context/GlobalContextProvider").default
+import React from "react"
+import GlobalContextProvider from "./src/context/GlobalContextProvider"
 
-exports.wrapRootElement = ({ element }) => {
-  return (
-    <GlobalContextProvider>
-      {element}
-    </GlobalContextProvider>
-  )
-}
-exports.onRenderBody = ({ setHtmlAttributes }) => {
+export const wrapRootElement = ({ element }) => (
+  <GlobalContextProvider>
+    {element}
+  </GlobalContextProvider>
+)
+
+export const onRenderBody = ({ setHtmlAttributes }) => {
   setHtmlAttributes({ lang: `en` })
 }
