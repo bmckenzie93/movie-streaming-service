@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import logo from '../../../images/logo.svg'
 import Button from '../../UI/Buttons/Button'
 import ButtonLInk from '../../UI/Buttons/ButtonLink'
 import MainContainer from '../../Containers/MainContainer'
 import './LoginLayout.scss'
+import { GlobalStateContext } from '../../../context/GlobalContextProvider'
 
-const LoginLayout = (props) => (
+const LoginLayout = (props) => {
   // user state
-
-  <main className='login-layout'>
+  const state = useContext(GlobalStateContext)
+  
+  return (
+  <main className={`login-layout theme-${state.theme}`}>
     <header className='login-layout__header'>
       <img src={logo} alt="HBO MAX" />
       {/* If users, who is watching, else Create Profile */}
@@ -32,6 +35,6 @@ const LoginLayout = (props) => (
       </div>
     </section>
   </main> 
-)
+)}
 
 export default LoginLayout  

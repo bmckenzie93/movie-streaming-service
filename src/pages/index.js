@@ -5,11 +5,13 @@ import CreateUser from "../components/CreateUser"
 import Seo from "../components/seo"
 
 const IndexPage = () => (
-  <LoginLayout>
-      {/* show login users or create user if no users exist */}
-      {/* <LoginUsers /> */} 
-      <CreateUser /> 
-  </LoginLayout>
+  <>
+    <LoginLayout>
+        {/* show login users or create user if no users exist */}
+        {/* <LoginUsers /> */} 
+        <CreateUser /> 
+    </LoginLayout>
+  </>
 )
 
 /**
