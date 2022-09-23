@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  &:hover {
+
     .user-icon__image-circle-border {
       animation: rotate 2s linear infinite;
     }
@@ -29,10 +29,17 @@
         transform: rotate(-360deg);
       }
     }
+
+
+  &__info {
+    text-transform: capitalize;
+    min-height: 1.2rem;
+    min-width: 200px;
   }
 
   &__image-circle {
     font-size: 3rem;
+    display: flex;
   }
   
   &__image-circle-border {
@@ -42,7 +49,7 @@
     width: 150px;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
     display: flex;
     align-items: center;
     justify-content: center;

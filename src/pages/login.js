@@ -1,29 +1,17 @@
 import * as React from "react"
-import MainLayout from "../components/Layouts/MainLayout/MainLayout"
+import LoginLayout from "../components/Layouts/LoginLayout"
 import LoginUsers from "../components/LoginUsers/"
 import CreateUser from "../components/CreateUser"
 import Seo from "../components/seo"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
-import { navigate } from "gatsby"
 
-const IndexPage = () => {
-  const globalState = React.useContext(GlobalStateContext)
-  React.useEffect(() => {
-    const loggedIn = false;
-
-    if(loggedIn === false) {
-      navigate('/create')
-    }
-  },[])
+const Login = () => {
+  const state = React.useContext(GlobalStateContext)
 
   return (
-  <>
-    <MainLayout>
-      
-      <h1>HOME PAGE</h1>
-        
-    </MainLayout>
-  </>
+    <LoginLayout>
+      <LoginUsers />
+    </LoginLayout>
 )}
 
 /**
@@ -33,4 +21,4 @@ const IndexPage = () => {
  */
 export const Head = () => <Seo title="Login" />
 
-export default IndexPage
+export default Login

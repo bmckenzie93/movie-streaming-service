@@ -4,14 +4,15 @@ export const GlobalStateContext = React.createContext()
 export const GlobalDispatchContext = React.createContext()
 
 const initialState = {
-  userId: 9999,
-  theme: 'red',
-  firstName: 'Brandon',
-  lastName: 'McKenzie'
+  userName: '',
+  userId: null,
+  loggedIn: false,
+  theme: 'red'
 }
 
 const reducer = (state, action) => {
   switch (action.type) {
+    // THEME REDUCER
     case 'THEME_RED' : 
       return {
         ...state,
@@ -42,6 +43,14 @@ const reducer = (state, action) => {
         ...state,
         theme: 'violet'
       }
+
+      // USER REDUCER
+      case 'USER_NAME' :
+        return {
+          ...state,
+          userName: action.payload
+        }
+
     default:
       throw new Error('Bad action Type')
   }
